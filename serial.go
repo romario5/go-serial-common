@@ -62,7 +62,7 @@ func (p *ChannelsPacket) PackChannels(b []byte) error {
 	b[18] = uint8((p.Channels[13] & 0x07FF) >> 1)
 	b[19] = uint8((p.Channels[13]&0x07FF)>>9 | (p.Channels[14]&0x07FF)<<2)
 	b[20] = uint8((p.Channels[14]&0x07FF)>>6 | (p.Channels[15]&0x07FF)<<5)
-	b[22] = uint8((p.Channels[15] & 0x07FF) >> 3)
+	b[21] = uint8((p.Channels[15] & 0x07FF) >> 3)
 
 	return nil
 }
